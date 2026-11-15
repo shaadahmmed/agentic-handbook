@@ -1,0 +1,7 @@
+{
+  "error": {
+    "code": "task_not_found",
+    "message": "No task with id 42 in this workspace.",
+    "requestId": "req_8f3a"
+  }
+}

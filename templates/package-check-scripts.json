@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "check": "pnpm lint && pnpm typecheck && pnpm test",
+    "check:full": "pnpm check && pnpm e2e && pnpm build"
+  }
+}

@@ -1,0 +1,8 @@
+# Default reviewers
+*                       @example/maintainers
+
+# Sensitive areas need specific owners
+/apps/api/src/auth/     @example/security-reviewers
+/apps/api/migrations/   @example/backend-leads
+/.github/workflows/     @example/platform
+/AGENTS.md              @example/maintainers
