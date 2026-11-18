@@ -23,7 +23,7 @@ Examples: [setup guide](../templates/docs/setup.md), [safe `.env.example`](../te
 
 ## Specifications, glossary and contracts
 
-`docs/specs/` contains observable problem, goal, non-goals, behavior, acceptance, affected areas, owner and unresolved questions. A spec is not permission for production changes. [Example per-field LWW spec](../templates/docs/specs/0012-sync-conflicts.md) explicitly retains different-field edits and documents handling of competing same-field edits; proposed history needs actual verification. `docs/glossary.md` defines domain vocabulary once (e.g., Workspace, Member, Task). `docs/data-model.md` describes schema owners, important constraints, migration safety and retention—not every column. `docs/api.md` or `openapi.yaml` owns requests, responses, auth, errors, pagination and compatibility; prefer a machine-readable contract as canonical when possible ([example API error](../templates/api-error.json)).
+`docs/specs/` contains observable problem, goal, non-goals, behavior, acceptance, affected areas, owner and unresolved questions. A spec is not permission for production changes. [Example per-field LWW spec](../templates/docs/specs/0012-sync-conflicts.md) explicitly retains different-field edits and documents handling of competing same-field edits; proposed history needs actual verification. `docs/glossary.md` defines domain vocabulary once (e.g., Workspace, Member, Task). `docs/data-model.md` describes schema owners, important constraints, migration safety and retention-not every column. `docs/api.md` or `openapi.yaml` owns requests, responses, auth, errors, pagination and compatibility; prefer a machine-readable contract as canonical when possible ([example API error](../templates/api-error.json)).
 
 ## Operating software
 

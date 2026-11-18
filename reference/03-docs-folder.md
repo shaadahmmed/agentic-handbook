@@ -14,7 +14,7 @@ ADRs record significant, nontrivial decisions as **Status, Context, Decision, Co
 
 ## Roadmap and specs
 
-A roadmap records **Now / Next / Later**, prioritized outcomes, non-goals, milestone exit criteria, owner and major dependencies. “Later” is not authorized scope. Date a commitment only where one exists. [Example roadmap](../templates/docs/roadmap.md). Feature acceptance belongs in a [spec](../templates/docs/specs/0012-sync-conflicts.md) or in a ticket/task contract—not both independently.
+A roadmap records **Now / Next / Later**, prioritized outcomes, non-goals, milestone exit criteria, owner and major dependencies. “Later” is not authorized scope. Date a commitment only where one exists. [Example roadmap](../templates/docs/roadmap.md). Feature acceptance belongs in a [spec](../templates/docs/specs/0012-sync-conflicts.md) or in a ticket/task contract-not both independently.
 
 ## Testing strategy
 

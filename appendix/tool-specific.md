@@ -4,19 +4,19 @@
 
 ## Claude Code instruction loading
 
-**Last verified: 2026-11-15.** [Claude Code — project memory](https://code.claude.com/docs/en/memory).
+**Last verified: 2026-11-15.** [Claude Code - project memory](https://code.claude.com/docs/en/memory).
 
 According to the cited official documentation, **native `AGENTS.md` support requires Claude Code v2.1.277 or later**; particular sessions before v2.1.281 had additional limitations. Project instruction mode `claude-md-or-agents-md` uses qualifying `CLAUDE.md` files preferentially, otherwise supported `AGENTS.md` in scope. The `claude-md-and-agents-md` setting reads both while avoiding duplicated imported content; `claude-md` and managed-only modes have different loading behavior. A local `CLAUDE.local.md` can alter fallback. Scoped/nested files may be loaded on file access rather than at startup. Inspect installed `/config` or context/instruction diagnostics and use [the optional import example](../templates/CLAUDE.md) only if needed. Do not infer that Codex, Copilot, Cursor or Gemini CLI have identical precedence; their behavior was **not independently re-verified** in this V4 revision.
 
 ## Claude Code skills and commands
 
-**Last verified: 2026-11-15.** [Claude Code — skills](https://code.claude.com/docs/en/skills); [skill-authoring guidance](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/best-practices) (the URL currently redirects to a Claude Platform docs page).
+**Last verified: 2026-11-15.** [Claude Code - skills](https://code.claude.com/docs/en/skills); [skill-authoring guidance](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/best-practices) (the URL currently redirects to a Claude Platform docs page).
 
 In current documentation, legacy `.claude/commands/name.md` is compatible with skills; `.claude/skills/name/SKILL.md` can expose `/name` invocation, and invocation eligibility depends on metadata and configuration. They are not simply “manual commands versus automatic skills.” Metadata, allowed tools, loading and scope are tool-dependent. [Skill example](../templates/.claude/skills/write-adr/SKILL.md); [legacy command example](../templates/.claude/commands/ship.md). No command/skill invocation was tested here.
 
 ## Claude Code hooks and permissions
 
-**Last verified: 2026-11-15.** [Claude Code — hooks](https://code.claude.com/docs/en/hooks), [permissions](https://code.claude.com/docs/en/permissions).
+**Last verified: 2026-11-15.** [Claude Code - hooks](https://code.claude.com/docs/en/hooks), [permissions](https://code.claude.com/docs/en/permissions).
 
 Hooks are event- and matcher-scoped; official reference describes `PreToolUse` and blocking a matching tool call on exit code 2. Settings/allow/ask/deny paths must be tested against the actual version and command shape. The [hook config](../templates/hook-config.json) attaches [protect-paths.py](../templates/.claude/hooks/protect-paths.py) to Edit/Write. It does not cover shell and other tool writes, all path escape forms, Git tracking versus *database-applied* migration status, or host security boundaries. New untracked migrations and tracked migrations receive different illustrative treatment; independently protect already applied migrations via authorized CI/human review and actual migration state. The `Read(./.env.*)` pattern in V2 was too broad because it may match `.env.example`; the [settings sample](../templates/.claude/settings.json) enumerates particular secret filenames. Its JSON syntax is not proof of policy enforcement.
 

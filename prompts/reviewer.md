@@ -1,4 +1,4 @@
-# Unified independent reviewer — five focus modes
+# Unified independent reviewer - five focus modes
 
 Use [shared rules](README.md#shared-rules) and [project brief](project-brief.md). **Read-only by default.** Run only separately authorized nondestructive checks. Replace `{{FOCUS}}` with `full`, `design`, `simplicity`, `acceptance`, or `post-implementation`; see [mode mapping](../REVISION-LOG.md#merged-reviewer-prompt-coverage-p1).
 
